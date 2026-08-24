@@ -6,7 +6,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 
-from rag import ask_question
 
 
 # Get the folder where app.py exists
@@ -52,8 +51,21 @@ async def home(request: Request):
 @app.post("/chat")
 async def chat(request: ChatRequest):
 
+    from rag import ask_question
+
     answer = ask_question(request.message)
 
     return {
         "answer": answer
+    }
+
+@app.post("/clear-memory")
+async def clear_chat_memory():
+
+    from rag import clear_memory
+
+    clear_memory()
+
+    return {
+        "message": "Memory cleared"
     }
