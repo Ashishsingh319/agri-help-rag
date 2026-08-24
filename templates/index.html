@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AgriAI</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🌱 AgriAI
+        </div>
+
+        <p class="subtitle">
+            Agricultural AI Assistant
+        </p>
+
+
+        <button
+            id="newChat"
+            class="new-chat">
+
+            + New Chat
+
+        </button>
+
+
+        <h4>Explore</h4>
+
+
+        <button
+            class="topic"
+            data-question="Tell me about wheat cultivation.">
+
+            🌾 Wheat
+
+        </button>
+
+
+        <button
+            class="topic"
+            data-question="Tell me about rice cultivation.">
+
+            🍚 Rice
+
+        </button>
+
+
+        <button
+            class="topic"
+            data-question="Tell me about maize cultivation.">
+
+            🌽 Maize
+
+        </button>
+
+
+        <button
+            class="topic"
+            data-question="How can soil fertility be improved?">
+
+            🌱 Soil
+
+        </button>
+
+
+        <button
+            class="topic"
+            data-question="How should irrigation be managed?">
+
+            💧 Irrigation
+
+        </button>
+
+
+        <div class="status">
+
+            <span></span>
+
+            Knowledge Base Online
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <header>
+
+            <div>
+
+                <h2>AgriAI Assistant</h2>
+
+                <p>
+                    Ask questions about farming and agriculture
+                </p>
+
+            </div>
+
+            <div class="online">
+                ● Online
+            </div>
+
+        </header>
+
+
+
+        <!-- CHAT -->
+
+        <div
+            id="chat"
+            class="chat">
+
+
+            <!-- WELCOME -->
+
+            <div
+                id="welcome"
+                class="welcome">
+
+
+                <div class="plant">
+                    🌱
+                </div>
+
+
+                <h1>
+                    How can I help you?
+                </h1>
+
+
+                <p>
+                    Ask me about crops, soil,
+                    irrigation, fertilizers,
+                    pests and diseases.
+                </p>
+
+
+                <!-- FARMER IMAGE -->
+
+                <img
+                    src="/static/images/farmer.jpg"
+                    class="farmer-image"
+                    alt="Farmer in field">
+
+
+                <!-- QUICK QUESTIONS -->
+
+                <div class="questions">
+
+
+                    <button
+                        data-question="Why are wheat leaves turning yellow?">
+
+                        🍃 Why are wheat leaves turning yellow?
+
+                    </button>
+
+
+                    <button
+                        data-question="What are common diseases of rice?">
+
+                        🐛 What are common diseases of rice?
+
+                    </button>
+
+
+                    <button
+                        data-question="How can soil fertility be improved?">
+
+                        🌱 How can soil fertility be improved?
+
+                    </button>
+
+
+                    <button
+                        data-question="How should wheat irrigation be managed?">
+
+                        💧 How should wheat irrigation be managed?
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- MESSAGES -->
+
+            <div
+                id="messages"
+                class="messages">
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- INPUT -->
+
+        <div class="input-area">
+
+
+            <textarea
+                id="input"
+                placeholder="Ask your agricultural question..."
+                rows="1"></textarea>
+
+
+            <button
+                id="send">
+
+                ➤
+
+            </button>
+
+
+        </div>
+
+
+        <p class="footer-text">
+
+            AgriAI uses your agricultural knowledge base
+            to answer questions.
+
+        </p>
+
+
+    </main>
+
+</div>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

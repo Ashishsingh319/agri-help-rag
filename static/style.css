@@ -1,0 +1,655 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f8f4;
+
+    color: #1d2b22;
+
+}
+
+
+.app {
+
+    display: flex;
+
+    height: 100vh;
+
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+
+    width: 250px;
+
+    background: white;
+
+    border-right: 1px solid #dfe8e1;
+
+    padding: 25px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #23733d;
+
+}
+
+
+.subtitle {
+
+    font-size: 12px;
+
+    color: #7a887f;
+
+    margin-top: 5px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.new-chat {
+
+    border: none;
+
+    background: #23733d;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.new-chat:hover {
+
+    background: #195c30;
+
+}
+
+
+.sidebar h4 {
+
+    color: #89958d;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+}
+
+
+.topic {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 12px;
+
+    text-align: left;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: #435148;
+
+    font-size: 14px;
+
+}
+
+
+.topic:hover {
+
+    background: #edf6ef;
+
+    color: #23733d;
+
+}
+
+
+.status {
+
+    margin-top: auto;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #f0f8f1;
+
+    color: #23733d;
+
+    font-size: 11px;
+
+}
+
+
+.status span {
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    background: #30a650;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+}
+
+
+header {
+
+    height: 70px;
+
+    background: white;
+
+    border-bottom: 1px solid #dfe8e1;
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+header h2 {
+
+    color: #1d5d34;
+
+    font-size: 19px;
+
+}
+
+
+header p {
+
+    color: #7a887f;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+
+}
+
+
+.online {
+
+    color: #299449;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   CHAT
+========================= */
+
+.chat {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+}
+
+
+.welcome {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.plant {
+
+    font-size: 45px;
+
+}
+
+
+.welcome h1 {
+
+    font-size: 32px;
+
+    color: #174c2b;
+
+    margin: 10px 0;
+
+}
+
+
+.welcome > p {
+
+    color: #78857d;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* FARMER */
+
+.farmer-image {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* QUICK QUESTIONS */
+
+.questions {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+.questions button {
+
+    padding: 14px;
+
+    background: white;
+
+    border: 1px solid #dfe8e1;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    color: #405047;
+
+}
+
+
+.questions button:hover {
+
+    background: #edf7ef;
+
+    border-color: #91bd9c;
+
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.messages {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    width: 100%;
+
+}
+
+
+.message {
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+}
+
+
+.user {
+
+    justify-content: flex-end;
+
+}
+
+
+.user-bubble {
+
+    background: #23733d;
+
+    color: white;
+
+    padding: 12px 16px;
+
+    border-radius: 15px 15px 3px 15px;
+
+    max-width: 70%;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+.bot {
+
+    justify-content: flex-start;
+
+}
+
+
+.bot-bubble {
+
+    background: white;
+
+    border: 1px solid #dfe8e1;
+
+    padding: 15px 18px;
+
+    border-radius: 15px 15px 15px 3px;
+
+    max-width: 75%;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-area {
+
+    display: flex;
+
+    max-width: 850px;
+
+    width: calc(100% - 60px);
+
+    margin: auto;
+
+    background: white;
+
+    border: 1px solid #bcd1c2;
+
+    border-radius: 15px;
+
+    padding: 8px;
+
+}
+
+
+textarea {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    resize: none;
+
+    padding: 10px;
+
+    font-size: 14px;
+
+}
+
+
+#send {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #23733d;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+}
+
+
+#send:hover {
+
+    background: #195c30;
+
+}
+
+
+.footer-text {
+
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #98a49d;
+
+    padding: 8px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+
+        display: none;
+
+    }
+
+
+    header {
+
+        padding: 15px;
+
+    }
+
+
+    .chat {
+
+        padding: 20px 15px;
+
+    }
+
+
+    .questions {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .welcome h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .input-area {
+
+        width: calc(100% - 20px);
+
+    }
+
+}/* =========================
+   AI ANSWER
+========================= */
+
+.bot-title {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #23733d;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid #e1e9e3;
+
+}
+
+
+.answer-content {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #35443a;
+
+}
+
+
+.answer-content strong {
+
+    color: #195c30;
+
+    font-weight: 700;
+
+}
+
+
+.answer-content h2 {
+
+    color: #195c30;
+
+    font-size: 18px;
+
+    margin: 10px 0 8px;
+
+}
+
+
+.answer-content h3 {
+
+    color: #23733d;
+
+    font-size: 15px;
+
+    margin: 15px 0 7px;
+
+}
+
+
+.answer-content h4 {
+
+    color: #23733d;
+
+    font-size: 14px;
+
+    margin: 12px 0 6px;
+
+}
+
+
+.answer-content .list-item {
+
+    margin: 6px 0;
+
+    padding-left: 5px;
+
+}
+
+
+.answer-content hr {
+
+    border: none;
+
+    border-top: 1px solid #e1e9e3;
+
+    margin: 15px 0;
+
+}
